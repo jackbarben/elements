@@ -1,7 +1,8 @@
 # elements
 
 
-Currently available to view at:https://nameless-springs-41886.herokuapp.com/
+Currently available to view at: 
+https://nameless-springs-41886.herokuapp.com/
 
 Contact me if you would like to register and check out the improvisations page, currently only my students have access to the improvisations page.
 
