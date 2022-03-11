@@ -1,0 +1,13 @@
+body {
+    font-family: abril-display, serif;
+}
+
+#tree {
+    background-size: cover;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

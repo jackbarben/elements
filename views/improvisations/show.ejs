@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/css/audio.css">
+
+<% layout('/layouts/boilerplate') %>
+
+
+
+    <div id="waveform">
+        <div class="card">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid img-thumbnail" id="show-image-size" alt="User Image"
+                        src="<%=improvisation.author.musicImage.url%>">
+                </div>
+                <div class="col-md-8">
+                    <div>
+                        <div class="card-body">
+                            <h5 class="card-title display-4">
+                                <%= improvisation.title %>
+                            </h5>
+                            <h5>
+                                by <span class="italic">
+                                    <%= improvisation.author.username %>
+                                </span>
+                            </h5>
+                        </div>
+                    </div>
+                    <h5 class="mt-5 h4">
+                        <%- improvisation.notes %>
+                    </h5>
+
+                </div>
+
+                <div class="p-0">
+                    <div class="control"></div>
+                    <img id="playPause" class="img-sizing" src="/img/play.png" alt="">
+                </div>
+
+                <div class="time" id="song-time">
+                    <span id="current">0:00</span> /
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="col-12">
+                    <div id="wave"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+
+        </div>
+        <% if(currentUser && improvisation.author.equals(currentUser._id)) { %>
+            <div class="col-12 text-start m-0 p-0">
+                <div class="card-footer text-muted">
+                    <a class="card-link btn btn-info" href="/improvisations/<%= improvisation._id %>/edit">Edit</a>
+                    <form class="d-inline" action="/improvisations/<%=improvisation._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+
+            </div>
+            <% } %>
+
+
+
+                <script> const songlinkupdate = '<%- improvisation.link.url %>'</script>
+                <script src="https://unpkg.com/wavesurfer.js"></script>
+                <script src="/js/audio.js"></script>

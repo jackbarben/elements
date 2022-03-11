@@ -1,0 +1,13 @@
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+#go-back-button {
+    color: white;
+
+}
+
+.registration-container {
+    display: none;
+}

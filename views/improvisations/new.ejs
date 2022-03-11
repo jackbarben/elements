@@ -1,0 +1,36 @@
+<% layout('/layouts/boilerplate') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <div class="row">
+        <h1 class="text-center pb-5">New improvisation</h1>
+        <div class="col-6 offset-3 text-center">
+            <form action="/improvisations" method="POST" novalidate class="validated-form"
+                enctype="multipart/form-data">
+
+                <div class="mb-3 h5 pt-3">
+                    <label class="form-label" for="title">Improvisation title</label>
+                    <input class="form-control" type="text" id="title" name="improvisation[title]" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="mb-3 h5 pt-5">Upload your improvisation!</div>
+                <div class="input-group mb-3">
+
+                    <input type="file" class="form-control" id="inputGroupFile03"
+                        aria-describedby="inputGroupFileAddon03" aria-label="Upload" name="songUpload">
+                </div>
+
+                <div class="mb-3 h5 pt-5">
+                    <label class="form-label" for="description">Describe your
+                        improvisation in words!</label>
+                    <textarea class="form-control" type="text" id="description" name="improvisation[notes]"></textarea>
+                </div>
+
+
+                <div class="mb-3 pt-5">
+                    <button type="submit" class="btn btn-success">Add improvisation</button>
+                </div>
+            </form>
+            <button type="button" class="btn btn-info" id="go-back-button">
+                <a href="/improvisations">Go Back to All Improvisations</a>
+            </button>
+        </div>
+    </div>

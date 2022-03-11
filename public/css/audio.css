@@ -1,0 +1,30 @@
+#img-sizing {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-sizing {
+    width: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#song-time {
+    text-align: center;
+    font-size: 1.5em;
+}
